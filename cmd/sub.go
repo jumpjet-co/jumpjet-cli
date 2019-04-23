@@ -5,7 +5,7 @@ import (
 	"github.com/spf13/cobra"
 	"io/ioutil"
 	"os"
-	"../api"
+	"github.com/jumpjet-co/jumpjet-cli/api"
 	"strings"
 )
 

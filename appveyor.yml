@@ -1,0 +1,16 @@
+# appveyor.yml
+
+clone_folder: c:\gopath\src\github.com\jumpjet-co\jumpjet-cli
+
+environment:
+  GOPATH: c:\gopath
+
+stack: go 1.12.3
+
+build_script:
+  - go get ./...
+  - go build -o jumpjet.exe
+
+artifacts:
+  - path: jumpjet.exe
+    name: jumpjet.exe
