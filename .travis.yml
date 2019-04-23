@@ -1,0 +1,13 @@
+language: go
+go: 1.12.3
+script: go build -o jumpjet-$TRAVIS_OS_NAME .
+deploy:
+  provider: releases
+  api_key:
+    secure: gI639YyNw9fqri5U1XPfT+Zmyqfm2Z4u2njz8yZLocSqqZFL9WgFdZiagHx0idpwxzcvfes3FBUIJfm48MAt8AMZc4sWhHr6YrHYO8FDpe93/O9QTzRHlZD9XcgZkqLnGX8P3rw5nTprzsxOGVrkmK95B65zVQ9vFB0eQFDjN4qnntr21MwZUHmpX11ser4/SW3PMZi3ULEk0AgVdnucveTFerOCwFvAWfrWnhz0rGuH48Q4Vy/esXS4w5CgxLKD0yeh9ndM7GpP7fYNnZBF50oKWk/Z7M3bAtc/qqU8lZA9yg39Nfe/jUkn2pgv9FvGPQhPuR1vxEXpwyMeQw7PfJPMtO/u9xn2yopwVkveBfiLseM5/NHY8EZDmD4VSV8nORoK5TplBsGiI7LYjN5Z+Dvpo48kxLEq50QTcj3tFyx1pe0O5MgEbNntZiUkxiGPk5tHr6Gs6Y0i4rUSCL4uQhZo0JqqdKignvWG6BJ8iMZ0WimHygtk18smOSHeuvHBWoLbXrBUJmi9Syyp0e+AZnmQlwiEFT90WSrPQwDfWT27l9heGpRe51hS1mQimT/bat1CVmKsTs8WEdtra91uoAv4a+g3Mf7+CBIC92AzKrJ+nt11lLtHiX3EmzBBVkHWo8/biZYcgvSl3WW5pONZB+WN6kXvKXhlM6sKfOGHRxI=
+  file: jumpjet-$TRAVIS_OS_NAME
+  draft: true
+  skip_cleanup: true
+  on:
+    repo: jumpjet-co/jumpjet-cli
+    tags: true
