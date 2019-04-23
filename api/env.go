@@ -9,7 +9,7 @@ import (
 
 func GetEnvVariables(apiKey string, appSlug string, env string) map[string]string {
 
-	url := fmt.Sprintf("http://localhost:3000/api/v1/app/%s/env/%s/var", appSlug, env)
+	url := fmt.Sprintf("http://app.jumpjet.co/api/v1/app/%s/env/%s/var", appSlug, env)
 	authorization := fmt.Sprintf("ApiKey %s", apiKey)
 
 	client := &http.Client{}
