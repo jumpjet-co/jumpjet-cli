@@ -17,7 +17,6 @@ artifacts:
 
 deploy:
   - release: $(appveyor_repo_tag_name)
-    description: Windows binary
     provider: GitHub
     auth_token:
       secure: UoNS/cfkAKZVzPlsFHZE8SDrnaEAV85ZV1aHT7PrVrjE6qZun+Tgj1HjJqnrE1nz
