@@ -22,7 +22,7 @@ deploy:
     auth_token:
       secure: UoNS/cfkAKZVzPlsFHZE8SDrnaEAV85ZV1aHT7PrVrjE6qZun+Tgj1HjJqnrE1nz
     artifact: jumpjet.exe
-    draft: false
+    draft: true
     prerelease: false
     on:
       branch: master
