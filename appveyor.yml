@@ -14,3 +14,15 @@ build_script:
 artifacts:
   - path: jumpjet.exe
     name: jumpjet.exe
+
+deploy:
+  - release: jumptet-windows-$(appveyor_repo_tag_name)
+    provider: GitHub
+    auth_token:
+      secure: UoNS/cfkAKZVzPlsFHZE8SDrnaEAV85ZV1aHT7PrVrjE6qZun+Tgj1HjJqnrE1nz
+    artifact: jumpjet.exe
+    draft: false
+    prerelease: false
+    on:
+      branch: master
+      APPVEYOR_REPO_TAG: true
